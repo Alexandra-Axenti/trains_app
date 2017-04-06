@@ -1,0 +1,8 @@
+CREATE TABLE trains (id  serial PRIMARY KEY, name VARCHAR);
+
+CREATE TABLE towns (id  serial PRIMARY KEY, name VARCHAR);
+
+CREATE TABLE stops (id  serial PRIMARY KEY, name VARCHAR, time TIME, train_id INTEGER, town_id INTEGER);
+
+ALTER TABLE stops ADD FOREIGN KEY (train_id) REFERENCES trains (id);
+ALTER TABLE stops ADD FOREIGN KEY (town_id) REFERENCES towns (id);
