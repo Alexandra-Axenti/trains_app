@@ -34,7 +34,7 @@ describe(Town) do
     end
 
     it("lets you add a train to a town") do
-      town = Town.new({:name => "Shanghai", :id => nil})
+      town = Town.new({:name => "Beijing", :id => nil})
       town.save()
       AN233 = Train.new({:name => "AN233", :id => nil})
       AN233.save()
